@@ -1,18 +1,20 @@
-abstract class AudioRecord {
-    private var baseData: AudioRecordBaseData = _
-
-    protected def initializeBaseData(baseData: AudioRecordBaseData): Unit = {
-        if (baseData != null) {
-            this.baseData = baseData.clone()
-        } else {
-            throw new AudioRecordBadInitializationException()
-        }
-    }
+abstract class AudioRecord(private val baseData: AudioRecordBaseData) {
+    private val infoSeparator = ":"
 
     def getName(): String = { baseData.getName() }
     def getAuthorName(): String = { baseData.getAuthorName() }
     def getDuration(): Int = { baseData.getDuration() }
 
     def getGenre(): String
-    def getFullInformation(): String
+    def getFullInformation(): String = {
+        new StringBuilder()
+            .append(getAuthorName())
+            .append(infoSeparator)
+            .append(getAuthorName())
+            .append(infoSeparator)
+            .append(getGenre())
+            .append(infoSeparator)
+            .append(getDuration())
+            .toString()
+    }
 }

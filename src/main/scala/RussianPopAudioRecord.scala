@@ -1,3 +1,5 @@
-class RussianPopAudioRecord extends PopAudioRecord {
-
+class RussianPopAudioRecord(private val baseData: AudioRecordBaseData) extends PopAudioRecord(baseData) {
+    override def getGenre(): String = {
+        "Russian pop"
+    }
 }
