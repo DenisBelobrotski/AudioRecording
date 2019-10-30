@@ -1,3 +1,6 @@
+import audiorecord._
+import audiorecord.pop._
+
 object AudioRecording {
     def main(args: Array[String]): Unit = {
 
@@ -12,7 +15,7 @@ object AudioRecording {
         discoRecordBaseData.setDuration(120)
 
         val popRecord = new PopAudioRecord(popRecordBaseData)
-        val discoRecord = new PopAudioRecord(discoRecordBaseData)
+        val discoRecord = new DiscoAudioRecord(discoRecordBaseData)
 
         println(popRecord.getFullInformation())
         println(discoRecord.getFullInformation())

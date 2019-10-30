@@ -1,3 +1,5 @@
+package audiorecord
+
 abstract class AudioRecord(private val baseData: AudioRecordBaseData) {
     if (baseData == null) {
         throw new AudioRecordBadInitializationException()

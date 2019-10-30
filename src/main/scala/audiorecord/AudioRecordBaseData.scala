@@ -1,3 +1,5 @@
+package audiorecord
+
 class AudioRecordBaseData {
     private var name: String = ""
     private var authorName: String = ""
