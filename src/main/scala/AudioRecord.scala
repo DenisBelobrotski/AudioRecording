@@ -10,7 +10,7 @@ abstract class AudioRecord(private val baseData: AudioRecordBaseData) {
         new StringBuilder()
             .append(getAuthorName())
             .append(infoSeparator)
-            .append(getAuthorName())
+            .append(getName())
             .append(infoSeparator)
             .append(getGenre())
             .append(infoSeparator)
