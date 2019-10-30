@@ -1,0 +1,3 @@
+class RussianPopAudioRecord extends PopAudioRecord {
+
+}

@@ -1,0 +1,3 @@
+class DiscoAudioRecord extends PopAudioRecord {
+
+}

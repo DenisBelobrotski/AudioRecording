@@ -1,0 +1,3 @@
+class PopAudioRecord extends AudioRecord {
+
+}
