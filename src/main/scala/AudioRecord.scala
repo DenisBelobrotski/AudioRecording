@@ -1,4 +1,8 @@
 abstract class AudioRecord(private val baseData: AudioRecordBaseData) {
+    if (baseData == null) {
+        throw new AudioRecordBadInitializationException()
+    }
+
     private val infoSeparator = ":"
 
     def getName(): String = { baseData.getName() }
