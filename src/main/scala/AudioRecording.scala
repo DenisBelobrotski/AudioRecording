@@ -19,14 +19,14 @@ object AudioRecording {
         val popRecord = new PopAudioRecord(popRecordBaseData)
         val discoRecord = new DiscoAudioRecord(discoRecordBaseData)
 
-        println(popRecord.getFullInformation())
-        println(discoRecord.getFullInformation())
+        println(popRecord.getFullInformation)
+        println(discoRecord.getFullInformation)
 
         val records = new ListBuffer[AudioRecord]
         records.addOne(popRecord)
         records.addOne(discoRecord)
 
         val disk = new CompactDisk(records.toList)
-        println(disk.getTotalDuration())
+        println(disk.getTotalDuration)
     }
 }

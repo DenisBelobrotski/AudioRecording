@@ -9,11 +9,11 @@ class CompactDisk(private var records: List[AudioRecord]) {
         audioRecords.addAll(records)
     }
 
-    def getTotalDuration(): Int = {
+    def getTotalDuration: Int = {
         var result = 0
 
         for (audioRecord <- audioRecords) {
-            result += audioRecord.getDuration()
+            result += audioRecord.getDuration
         }
 
         result
