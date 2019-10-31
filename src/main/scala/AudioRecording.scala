@@ -61,5 +61,7 @@ object AudioRecording {
             print(track.getName + " ")
         }
         println()
+
+        println(disk.trackWithDuration(115 to 126).getName)
     }
 }

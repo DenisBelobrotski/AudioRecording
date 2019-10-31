@@ -35,4 +35,8 @@ class CompactDisk(private var tracks: List[AudioRecord]) {
         audioRecords.toList.filter(record =>
             durationRange.start <= record.getDuration && record.getDuration <= durationRange.end)
     }
+
+    def trackWithDuration(durationRange: Range): AudioRecord = {
+        filter(durationRange).head
+    }
 }
