@@ -1,12 +1,12 @@
-import scala.collection.mutable.ListBuffer
-
 import audiorecord.AudioRecord
 
-class CompactDisk(private var records: List[AudioRecord]) {
-    protected val audioRecords = new ListBuffer[AudioRecord]
+import scala.collection.mutable.ListBuffer
 
-    if (records != null) {
-        audioRecords.addAll(records)
+class CompactDisk(private var tracks: List[AudioRecord]) {
+    protected var audioRecords = new ListBuffer[AudioRecord]
+
+    if (tracks != null) {
+        audioRecords.addAll(tracks)
     }
 
     def getTotalDuration: Int = {
@@ -17,5 +17,17 @@ class CompactDisk(private var records: List[AudioRecord]) {
         }
 
         result
+    }
+
+    def getTracks: List[AudioRecord] = {
+        audioRecords.toList
+    }
+
+    def sort(): Unit = {
+        audioRecords = audioRecords.sortBy(_.getGenre)
+    }
+
+    def sorted(): CompactDisk = {
+        new CompactDisk(audioRecords.sortBy(_.getGenre).toList)
     }
 }
