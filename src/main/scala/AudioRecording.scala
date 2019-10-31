@@ -1,6 +1,8 @@
 import audiorecord._
 import audiorecord.pop._
 
+import scala.collection.mutable.ListBuffer
+
 object AudioRecording {
     def main(args: Array[String]): Unit = {
 
@@ -19,5 +21,12 @@ object AudioRecording {
 
         println(popRecord.getFullInformation())
         println(discoRecord.getFullInformation())
+
+        val records = new ListBuffer[AudioRecord]
+        records.addOne(popRecord)
+        records.addOne(discoRecord)
+
+        val disk = new CompactDisk(records.toList)
+        println(disk.getTotalDuration())
     }
 }
