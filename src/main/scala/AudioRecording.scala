@@ -1,5 +1,6 @@
 import audiorecord._
 import audiorecord.pop._
+import ui.UIManager
 
 import scala.collection.mutable.ListBuffer
 
@@ -63,5 +64,7 @@ object AudioRecording {
         println()
 
         println(disk.trackWithDuration(115 to 126).getName)
+
+        UIManager.startInteraction()
     }
 }
