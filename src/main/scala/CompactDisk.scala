@@ -2,11 +2,18 @@ import audiorecord.AudioRecord
 
 import scala.collection.mutable.ListBuffer
 
-class CompactDisk(private var tracks: List[AudioRecord]) {
+class CompactDisk {
     protected var audioRecords = new ListBuffer[AudioRecord]
 
-    if (tracks != null) {
-        audioRecords.addAll(tracks)
+    def this(tracks: List[AudioRecord]) {
+        this()
+        if (tracks != null) {
+            audioRecords.addAll(tracks)
+        }
+    }
+
+    def addTrack(track: AudioRecord): Unit = {
+        audioRecords.addOne(track)
     }
 
     def getTotalDuration: Int = {

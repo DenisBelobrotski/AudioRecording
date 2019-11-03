@@ -30,12 +30,11 @@ object AudioRecording {
         println(discoRecord.getFullInformation)
         println(popRecord1.getFullInformation)
 
-        val records = new ListBuffer[AudioRecord]
-        records.addOne(popRecord)
-        records.addOne(discoRecord)
-        records.addOne(popRecord1)
+        val disk = new CompactDisk()
+        disk.addTrack(popRecord)
+        disk.addTrack(discoRecord)
+        disk.addTrack(popRecord1)
 
-        val disk = new CompactDisk(records.toList)
         val sortedDisk = disk.sorted()
 
         println(disk.getTotalDuration)
