@@ -10,22 +10,27 @@ object UIManager {
 
     @scala.annotation.tailrec
     def startInteraction(): Unit = {
-        findOutCommand() match {
-            case "add" =>
-                disk.addTrack(findOutTrack())
-            case "len" =>
-                println(disk.getTotalDuration)
-            case "sort" =>
-                disk.sort()
-            case "filter" =>
-                printTracks(disk.filter(findOutDurationRange()))
-            case "print" =>
-                printTracks(disk.getTracks)
-            case "exit" => return
-            case _ =>
-                println("Unknown command")
+        try {
+            findOutCommand() match {
+                case "add" =>
+                    disk.addTrack(findOutTrack())
+                case "len" =>
+                    println(disk.getTotalDuration)
+                case "sort" =>
+                    disk.sort()
+                case "filter" =>
+                    printTracks(disk.filter(findOutDurationRange()))
+                case "print" =>
+                    printTracks(disk.getTracks)
+                case "exit" => return
+                case _ =>
+                    println("Unknown command")
+            }
+            println()
+        } catch {
+            case exception: Exception =>
+                println(exception.getMessage)
         }
-        println()
         startInteraction()
     }
 
