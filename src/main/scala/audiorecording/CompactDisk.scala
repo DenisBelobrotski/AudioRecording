@@ -20,11 +20,9 @@ class CompactDisk {
 
     def getTotalDuration: Int = {
         var result = 0
-
         for (audioRecord <- audioRecords) {
             result += audioRecord.getDuration
         }
-
         result
     }
 

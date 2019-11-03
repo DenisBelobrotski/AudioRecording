@@ -30,7 +30,7 @@ class AudioRecordBaseData {
     }
 
     override def clone(): AudioRecordBaseData = {
-        var newInstance = new AudioRecordBaseData()
+        val newInstance = new AudioRecordBaseData()
 
         newInstance.setName(this.getName)
         newInstance.setAuthorName(this.getAuthorName)
