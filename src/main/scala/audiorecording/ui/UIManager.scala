@@ -1,6 +1,6 @@
-package ui
+package audiorecording.ui
 
-import audiorecord.AudioRecordBaseData
+import audiorecording.audiorecord.AudioRecordBaseData
 
 import scala.io.StdIn._
 

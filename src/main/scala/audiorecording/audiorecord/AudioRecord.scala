@@ -1,4 +1,4 @@
-package audiorecord
+package audiorecording.audiorecord
 
 abstract class AudioRecord(private val baseData: AudioRecordBaseData) {
     if (baseData == null) {

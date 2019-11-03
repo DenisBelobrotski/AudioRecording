@@ -1,6 +1,6 @@
-package ui
+package audiorecording.ui
 
-import audiorecord.pop._
+import audiorecording.audiorecord.pop._
 
 object GenresMenu {
     val contents = Map(

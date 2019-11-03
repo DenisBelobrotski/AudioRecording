@@ -1,4 +1,6 @@
-import audiorecord.AudioRecord
+package audiorecording
+
+import audiorecording.audiorecord.AudioRecord
 
 import scala.collection.mutable.ListBuffer
 

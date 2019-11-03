@@ -1,4 +1,4 @@
-package audiorecord
+package audiorecording.audiorecord
 
 class AudioRecordBaseData {
     private var name: String = ""

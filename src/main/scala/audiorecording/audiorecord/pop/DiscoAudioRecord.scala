@@ -1,6 +1,6 @@
-package audiorecord.pop
+package audiorecording.audiorecord.pop
 
-import audiorecord.AudioRecordBaseData
+import audiorecording.audiorecord.AudioRecordBaseData
 
 class DiscoAudioRecord(private val baseData: AudioRecordBaseData) extends PopAudioRecord(baseData) {
     override def getGenre: String = {

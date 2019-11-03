@@ -1,8 +1,8 @@
-import audiorecord._
-import audiorecord.pop._
-import ui.UIManager
+package audiorecording
 
-import scala.collection.mutable.ListBuffer
+import audiorecording.audiorecord.AudioRecordBaseData
+import audiorecording.audiorecord.pop.{DiscoAudioRecord, PopAudioRecord}
+import audiorecording.ui.UIManager
 
 object AudioRecording {
     def main(args: Array[String]): Unit = {
